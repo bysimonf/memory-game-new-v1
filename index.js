@@ -74,11 +74,19 @@ createMemoryCards()
 
 let cardsToCompare = []
 
+let gameEndCount = 0
+
 const checkForMatch = () => {
 
     if (cardsToCompare[0].alt === cardsToCompare[1].alt) { // using alt attribute to check for match
         console.log('it is a match!')
         cardsToCompare = []
+        gameEndCount++
+
+        if (gameEndCount === cardsData.length / 2) {
+            setTimeout(() => {
+                alert('The game is finished!')}, 1000)
+        }
     }
     else {
         setTimeout(() => {  // using setTimeout bc otherwise image changes to fast
@@ -94,3 +102,5 @@ const checkForMatch = () => {
      }, 1000)
     }
 }
+
+
