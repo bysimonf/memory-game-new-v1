@@ -37,7 +37,7 @@ const revealCard = () => {
 
 // -----------------------------------------------------------------------------------
 
-/* please completely ignore for v1:
+// v2: create DOM elements via JS: 
 const gameTable = document.querySelector('.game-table')
 
 const createMemoryCards = () => {
@@ -63,7 +63,7 @@ const createMemoryCards = () => {
 }
 
 createMemoryCards()
-*/
+
 
 // -----------------------------------------------------------------------------------
 
