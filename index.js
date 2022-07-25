@@ -8,8 +8,16 @@ const cardsData = [
         "image": "dog.jpg",
     },
     {
+        "name": "fish",
+        "image": "fish.jpg",
+    },
+    {
         "name": "dog",
         "image": "dog.jpg",
+    },
+    {
+        "name": "fish",
+        "image": "fish.jpg",
     },
     {   
         "name": "bird",
@@ -85,21 +93,21 @@ const checkForMatch = () => {
 
         if (gameEndCount === cardsData.length / 2) {
             setTimeout(() => {
-                alert('The game is finished!')}, 1000)
+                alert('The game is finished!')
+            }, 1000)
         }
-    }
+    } 
     else {
         setTimeout(() => {  // using setTimeout bc otherwise image changes to fast
-        console.log('sorry no match!')
-        cardsToCompare[0].src = 'images/cardbackground.jpg'
-        cardsToCompare[0].alt =  'background of the memory card'
+            console.log('sorry no match!')
+            cardsToCompare[0].src = 'images/cardbackground.jpg'
+            cardsToCompare[0].alt =  'background of the memory card'
 
-        cardsToCompare[1].src = 'images/cardbackground.jpg'
-        cardsToCompare[1].alt =  'background of the memory card'
+            cardsToCompare[1].src = 'images/cardbackground.jpg'
+            cardsToCompare[1].alt =  'background of the memory card'
 
-        cardsToCompare = []
-
-     }, 1000)
+            cardsToCompare = []
+        }, 1000)
     }
 }
 
